@@ -473,6 +473,7 @@ void Metaballs::Triangulate(unsigned int iGrid, float gridX, float gridY, float 
 				const float pX = lerpf(aX, bX, distance);
 				const float pY = lerpf(aY, bY, distance);
 				const float pZ = lerpf(aZ, bZ, distance);
+				// ^ this could be done with SSE (FIXME)
 
 				// calculate normal
 				// works much like CalculateIsoValue()
@@ -510,8 +511,14 @@ void Metaballs::Triangulate(unsigned int iGrid, float gridX, float gridY, float 
 				const __m128 normal = _mm_mul_ps(nXYZZ, oneOverNormLen);
 
 				// vertex: store position & normal (keep write sequential)
-				s_pVertices[s_genNumVerts].position = std::move(Vector3(pX, pY, pZ));
-				memcpy(&s_pVertices[s_genNumVerts].normal, normal.m128_f32, 3*sizeof(float));
+				// untested fix (FIXME)
+				Vertex &vertex = s_pVertices[s_genNumVerts];
+				vertex.position.x = pX;
+				vertex.position.y = pY;
+				vertex.position.z = pZ;
+				vertex.normal.x = normal.m128_f32[0];
+				vertex.normal.y = normal.m128_f32[1];
+				vertex.normal.z = normal.m128_f32[2];
 
 				// vertex: store and cache index
 				vertexIndices[iEdge] = iVertex = s_genNumVerts++;
