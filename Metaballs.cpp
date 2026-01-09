@@ -1,7 +1,7 @@
 
 /*
 	The world famous TPB blobs.
-	Quickly ported from an Xbox 1 project (added some SSE3).
+	Quickly ported from old 2002-2003 PC/Xbox code, SSE1, (added some SSE3).
 
 	** Note: needs a large stack! **
 	It's an old-school surface crawler, could probably be done threaded and brute force with AVX.
