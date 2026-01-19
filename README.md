@@ -1,10 +1,8 @@
-# oldschool-metaballs
 
-09/01/2026 -- I've formed a plan to unabandon this by now very retro stuff, appropriate it for something or other, and parallelize it on CPU.
+# oldschool-metaballs (originally for Pentium Celeron 733Mhz / Xbox)
 
-Oldschool optimized CPU metaballs implementation (surface crawler).  
-It's a snippet taken from TPB-06 (http://www.pouet.net/prod.php?which=64338).
-
-It won't compile out of the box, nor be updated.
+- Oldschool SIMD-optimized surface crawler (first version ~2001-2002).
+- It's a snippet taken from TPB-06 (http://www.pouet.net/prod.php?which=64338) where I used them once more, without any further thread parallelism.
+- It won't compile out of the box.
 
 Have fun! :)
