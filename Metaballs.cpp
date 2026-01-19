@@ -2,10 +2,10 @@
 /*
 	The world famous TPB blobs.
 	
-	Written initially in 2001-2002, then used and improved a few times.
+	Written initially in 2001-2002, then used and improved a few times (not significantly however).
 	This version is how we used in TPB-06 (Kindergarten 2014).
 
-	Note: needs a large stack!
+	Note: needs a large stack and SSE3.
 	
 	It's an old-school surface crawler, could probably be done threaded (OpenMP) and brute force, 
 	like Erik (Kusma) did at the time (demonstrated it at Breakpoint 2003, I remember).
@@ -15,7 +15,7 @@
 	- Improve use of SIMD (including, perhaps, use of wider registers).
 
 	But in the end this is legacy so optimizing them like I would have for a single thread, by using
-	tests to reduce calcultions and cell visits is probably not *the* way since that poentially 
+	tests to reduce calcultions and cell visits is probably not *the* way since that potentially 
 	makes thread parallelization harder if not plain inefficient.
 
 	But fun can still be had in the future because who doesn't like shiny metal blobls?
