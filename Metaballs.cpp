@@ -1,19 +1,24 @@
 
 /*
 	The world famous TPB blobs.
-	Quickly ported from old 2002-2003 PC/Xbox code, SSE1, (added some SSE3).
+	
+	Written initially in 2001-2002, then used and improved a few times.
+	This version is how we used in TPB-06 (Kindergarten 2014).
 
-	** Note: needs a large stack! **
-	It's an old-school surface crawler, could probably be done threaded and brute force with AVX.
-	Then again: there's a GPU these days.
+	Note: needs a large stack!
+	
+	It's an old-school surface crawler, could probably be done threaded (OpenMP) and brute force, 
+	like Erik (Kusma) did at the time (demonstrated it at Breakpoint 2003, I remember).
 
-	FIXME:
-	1. Remove any remaining hacks.
-	2. Use AVX?
-	3. Add reference code (look in old backups).
+	FIXME / improvements I've got in mind:
+	- Remove any remaining hacks (vertex caching can be done in a much smarter way).
+	- Improve use of SIMD (including, perhaps, use of wider registers).
 
-	Basic (static) performance related parameters can be modified below.
-	All shader parameters and other basics can be set at runtime.
+	But in the end this is legacy so optimizing them like I would have for a single thread, by using
+	tests to reduce calcultions and cell visits is probably not *the* way since that poentially 
+	makes thread parallelization harder if not plain inefficient.
+
+	But fun can still be had in the future because who doesn't like shiny metal blobls?
 */
 
 #include "Platform.h"
