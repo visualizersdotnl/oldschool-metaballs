@@ -3,7 +3,7 @@
 	The world famous TPB blobs.
 	
 	Written initially in 2001-2002, then used and improved a few times (not significantly however).
-	This version is how we used in TPB-06 (Kindergarten 2014).
+	This version was used in TPB-06 (Kindergarten 2014).
 
 	Note: needs a large stack and SSE3.
 	
