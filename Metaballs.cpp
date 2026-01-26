@@ -18,7 +18,7 @@
 	tests to reduce calcultions and cell visits is probably not *the* way since that potentially 
 	makes thread parallelization harder if not plain inefficient.
 
-	But fun can still be had in the future because who doesn't like shiny metal blobls?
+	But fun can still be had in the future because who doesn't like shiny metal blobs?
 */
 
 #include "Platform.h"
