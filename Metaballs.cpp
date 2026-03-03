@@ -44,14 +44,14 @@ struct Face
 	uint32_t iC;
 };
 
-const unsigned int kGridDepth = 64;
-const unsigned int kGridCubes = kGridDepth-1;
-const unsigned int kGridDepthSqr = kGridDepth*kGridDepth;
-const float kGridStep = 2.f / (float) kGridCubes;
+constexpr unsigned int kGridDepth = 64;
+constexpr unsigned int kGridCubes = kGridDepth-1;
+constexpr unsigned int kGridDepthSqr = kGridDepth*kGridDepth;
+constexpr float kGridStep = 2.f / (float) kGridCubes;
 
-const unsigned int kMaxFaces = 65536*4;      
-const unsigned int kMaxVertices = 65536*4;   
-const size_t kVertexBufferSize = kMaxVertices * sizeof(Vertex);
+constexpr unsigned int kMaxFaces = 65536*4;      
+constexpr unsigned int kMaxVertices = 65536*4;   
+constexpr size_t kVertexBufferSize = kMaxVertices * sizeof(Vertex);
 
 // grid & cache arrays (huge!)
 static __declspec(align(16)) float s_isoValues[kGridDepth*kGridDepth*kGridDepth];
