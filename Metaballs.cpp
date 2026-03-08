@@ -58,7 +58,7 @@ static __declspec(align(16)) float s_isoValues[kGridDepth*kGridDepth*kGridDepth]
 static __declspec(align(16)) uint32_t s_gridCache[kGridCubes*kGridCubes*kGridCubes*3 + 3];
 
 // (relative) indices for a cube in the grid
-const unsigned int kCubeIndices[8] =
+constexpr unsigned int kCubeIndices[8] =
 {
 	0,
 	1,
@@ -71,7 +71,7 @@ const unsigned int kCubeIndices[8] =
 };
 
 // (relative) offsets for a cube in grid space
-const Vector3 kCubeOffsets[8] =
+constexpr Vector3 kCubeOffsets[8] =
 {
 	Vector3(      0.f,       0.f,       0.f),
 	Vector3(kGridStep,       0.f,       0.f),
