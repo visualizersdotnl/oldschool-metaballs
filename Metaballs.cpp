@@ -15,7 +15,7 @@
 	- Improve use of SIMD (including, perhaps, use of wider registers).
 
 	But in the end this is legacy so optimizing them like I would have for a single thread, by using
-	tests to reduce calcultions and cell visits is probably not *the* way since that potentially 
+	tests to reduce calculations and cell visits is probably not *the* way since that potentially 
 	makes thread parallelization harder if not plain inefficient.
 
 	But fun can still be had in the future because who doesn't like shiny metal blobs?
